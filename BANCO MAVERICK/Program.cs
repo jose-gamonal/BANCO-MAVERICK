@@ -34,30 +34,45 @@ namespace BANCO_MAVERICK
                 string input = Console.ReadLine();
                 if (input == "1")
                 {
+                    Console.WriteLine("Quantos reais deseja depositar?");
+                    dictionary[contaatual].saldoatualassociado += Convert.ToDouble(Console.ReadLine());
                     Console.Clear();
                     MenuInicial();
                 }
                 else if (input == "2")
                 {
+                    Console.WriteLine("Quantos reais deseja sacar?");
+                    dictionary[contaatual].saldoatualassociado -= Convert.ToDouble(Console.ReadLine());
                     Console.Clear();
                     MenuInicial();
                 }
                 else if (input == "3")
                 {
+                    Console.WriteLine("Para qual conta deseja realizar a transferência?");
+                    int input2 = Convert.ToInt32(Console.ReadLine());
+                    if (input2 > quantascontas || input2 < 1)
+                    {
+                        Console.WriteLine("* CONTA INEXISTENTE. TRANSFERÊNCIA ABORTADA.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Digite o valor da transferência.");
+                        double transfer = Convert.ToDouble(Console.ReadLine());
+                        dictionary["C" + input2].saldoatualassociado += transfer;
+                        dictionary[contaatual].saldoatualassociado -= transfer;
+                    }
                     Console.Clear();
                     MenuInicial();
                 }
                 else if (input == "4")
                 {
                     Console.WriteLine($"Você tem {quantascontas} contas.");
-                    Console.WriteLine("Deseja trocar para qual conta?");
+                    Console.WriteLine("Deseja trocar para qual conta? (Utilize apenas o número).");
                     int input2 = Convert.ToInt32(Console.ReadLine());
 
                     if (input2 > quantascontas || input2 < 1)
                     {
-                        Console.Clear();
-                        Console.WriteLine("\r\n⚠️ CONTA INEXISTENTE. VOCÊ PERMANECERÁ NA CONTA ATUAL.\r\n");
-                        MenuInicial();
+                        Console.WriteLine("* CONTA INEXISTENTE. VOCÊ PERMANECERÁ NA CONTA ATUAL.");
                     }
                     else
                     {
@@ -65,12 +80,10 @@ namespace BANCO_MAVERICK
                         Console.Clear();
                         MenuInicial();
                     }
-
                 }
                 else if (input == "5")
                 {
                     quantascontas++;
-
                     dictionary["C" + Convert.ToString(quantascontas)] = new Conta(0);
                     Console.WriteLine($"CONTA C{quantascontas} CRIADA");
                 }
@@ -86,7 +99,6 @@ namespace BANCO_MAVERICK
             }
         }
     }
-
     class Conta
     {
         public double saldoatualassociado;

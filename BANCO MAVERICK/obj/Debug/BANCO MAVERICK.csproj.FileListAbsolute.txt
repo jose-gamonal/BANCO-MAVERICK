@@ -1,0 +1,7 @@
+C:\Users\Gamonal\Desktop\BANCO MAVERICK\BANCO MAVERICK\bin\Debug\BANCO MAVERICK.exe.config
+C:\Users\Gamonal\Desktop\BANCO MAVERICK\BANCO MAVERICK\bin\Debug\BANCO MAVERICK.exe
+C:\Users\Gamonal\Desktop\BANCO MAVERICK\BANCO MAVERICK\bin\Debug\BANCO MAVERICK.pdb
+C:\Users\Gamonal\Desktop\BANCO MAVERICK\BANCO MAVERICK\obj\Debug\BANCO MAVERICK.csproj.AssemblyReference.cache
+C:\Users\Gamonal\Desktop\BANCO MAVERICK\BANCO MAVERICK\obj\Debug\BANCO MAVERICK.csproj.CoreCompileInputs.cache
+C:\Users\Gamonal\Desktop\BANCO MAVERICK\BANCO MAVERICK\obj\Debug\BANCO MAVERICK.exe
+C:\Users\Gamonal\Desktop\BANCO MAVERICK\BANCO MAVERICK\obj\Debug\BANCO MAVERICK.pdb
